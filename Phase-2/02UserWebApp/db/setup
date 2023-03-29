@@ -1,0 +1,5 @@
+use mydb;
+
+create table user(fistname varchar(25),lastname varchar(25),username varchar(25),pass varchar(25));
+
+select * from user;

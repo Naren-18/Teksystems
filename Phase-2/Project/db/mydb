@@ -1,0 +1,15 @@
+create schema airline;
+
+use airline;
+
+create table login(id int ,
+		username varchar(45),password varchar(25));
+
+
+
+create table flight(id int ,
+		Name varchar(45),Source varchar(25),Destination varchar(25),Price varchar(25));
+
+
+create table booking(id int ,
+		Name varchar(45),Number varchar(25),Date varchar(25),no_of_persons varchar(25),Airline  varchar(25),Source  varchar(25),destination  varchar(25),Price  varchar(25) );

@@ -1,0 +1,62 @@
+create schema Learners_Academy;
+
+use Learners_Academy;
+
+CREATE TABLE `classes` (
+  `id` int(11) NOT NULL,
+  `section` int(55) NOT NULL,
+  `teacher` int(11) NOT NULL,
+  `subject` int(11) NOT NULL,
+  `time` varchar(44) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+
+INSERT INTO `classes` (`id`, `section`, `teacher`, `subject`, `time`) VALUES
+(1, 1, 1, 1, '9:00'),
+(2, 3, 2, 2, '11:30');
+
+
+
+
+
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL,
+  `firstname` varchar(55) NOT NULL,
+  `lastname` varchar(55) NOT NULL,
+  `age` int(11) DEFAULT NULL,
+  `class` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+INSERT INTO `students` (`id`, `firstname`, `lastname`, `age`, `class`) VALUES
+(1, 'Ali', 'Ahsan', 21, 1),
+(2, 'Hassan', 'Ahmed', 23, 2),
+(4, 'Gazi', 'Dani', 21, 1),
+(5, 'Tony', 'Fadel', 18, 2),
+(6, 'Lami', 'Saro', 24, 1),
+(7, 'Yazen', 'Rawn', 24, 2);
+
+CREATE TABLE `subjects` (
+  `id` int(11) NOT NULL,
+  `name` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `subjects` (`id`, `name`) VALUES
+(1, 'English'),
+(2, 'Mathematics');
+
+
+CREATE TABLE `teachers` (
+  `id` int(11) NOT NULL,
+  `firstname` varchar(55) NOT NULL,
+  `lastname` varchar(55) NOT NULL,
+  `age` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+INSERT INTO `teachers` (`id`, `firstname`, `lastname`, `age`) VALUES
+(1, 'Sami', 'Rashed', '55'),
+(2, 'Rami', 'Sari', '66');
